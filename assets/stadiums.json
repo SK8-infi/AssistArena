@@ -1,0 +1,694 @@
+{
+  "tournament": {
+    "openingMatch": {
+      "date": "2026-06-11",
+      "stadiumId": "mexico-city"
+    },
+    "final": {
+      "date": "2026-07-19",
+      "stadiumId": "new-york-new-jersey"
+    },
+    "accessibility_tickets": {
+      "categories": [
+        "Wheelchair User",
+        "Easy Access Standard",
+        "Easy Access Amenity"
+      ],
+      "companion_status": "paid (not free) for the 2026 cycle"
+    }
+  },
+  "stadiums": [
+    {
+      "id": "mexico-city",
+      "stadiumName": "Estadio Azteca",
+      "publicName": "Estadio Banorte",
+      "fifaTitle": "Estadio Ciudad de Mexico (Mexico City Stadium)",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "spectatorCapacity": 80824,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Puerta 1",
+            "isAccessible": true,
+            "guidance": "Main ramp access; wheelchair bays nearby"
+          },
+          {
+            "entranceName": "Puerta 7",
+            "isAccessible": true,
+            "guidance": "Elevator access to upper levels"
+          },
+          {
+            "entranceName": "Puerta 15",
+            "isAccessible": false,
+            "guidance": "Stairs only"
+          }
+        ],
+        "accessibleSeating": "Accessible seats mostly Category 1; wheelchair bays with companion seats",
+        "calmRoom": "None listed; quiet concourse areas near Puerta 1 on request",
+        "auditoryAssist": "Hearing-assist system available",
+        "visualAssist": "Braille and tactile signage limited; no audio-descriptive commentary listed - staff guides available on request; service-animal relief area outside Puerta 1 on request",
+        "lifts": "Elevators and ramps throughout",
+        "accessibleToilets": "Accessible toilets available",
+        "calmPathHint": "Arrive early via Puerta 1 ramp to avoid main crowd flows",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Water fountains and vendors on all concourses",
+        "medicalAid": "First aid posts at Puertas 1 and 7",
+        "babyCare": "Nursing room near Puerta 1 guest services",
+        "prayerSpace": "Multi-faith room on main concourse, ask guest services"
+      }
+    },
+    {
+      "id": "new-york-new-jersey",
+      "stadiumName": "MetLife Stadium",
+      "publicName": "MetLife Stadium",
+      "fifaTitle": "New York New Jersey Stadium",
+      "city": "East Rutherford, New Jersey (New York/New Jersey)",
+      "country": "USA",
+      "spectatorCapacity": 80663,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "MetLife Gate",
+            "isAccessible": true,
+            "guidance": "Wheelchair escort from gate on request"
+          },
+          {
+            "entranceName": "HCLTech Gate",
+            "isAccessible": true,
+            "guidance": "Near Plaza Level sensory pod and elevator lobby"
+          },
+          {
+            "entranceName": "Verizon Gate",
+            "isAccessible": true,
+            "guidance": "Wheelchair escort from gate on request"
+          }
+        ],
+        "accessibleSeating": "Wheelchair, low-mobility, and companion seating on all levels",
+        "calmRoom": "KultureCity sensory pods at two elevator lobbies (Plaza Level HCLTech; 3rd-floor Moody's); sensory bags (noise-cancelling headphones, fidget toys, weighted lap pads) at Guest Service booths",
+        "auditoryAssist": "Assistive listening via ListenWIFI app; captioning on ribbon boards and concourse TVs",
+        "visualAssist": "Braille and tactile signage at elevators and restrooms; audio-descriptive commentary receivers at Guest Service booths; service-animal relief area outside the MetLife Gate",
+        "lifts": "Elevator lobbies at Plaza Level HCLTech and 3rd-floor Moody's, plus all seating levels",
+        "accessibleToilets": "Accessible restrooms on all levels",
+        "calmPathHint": "Enter via HCLTech Gate for shortest path to the Plaza Level sensory pod",
+        "isVerified": true
+      },
+      "amenities": {
+        "drinkingWater": "Water fountains on every concourse",
+        "medicalAid": "First aid stations on Plaza and Upper concourses",
+        "babyCare": "Nursing room at Guest Services, Plaza Level",
+        "prayerSpace": "Quiet/multi-faith space via Guest Services"
+      }
+    },
+    {
+      "id": "dallas",
+      "stadiumName": "AT&T Stadium",
+      "publicName": "AT&T Stadium",
+      "fifaTitle": "Dallas Stadium",
+      "city": "Arlington, Texas (Dallas)",
+      "country": "USA",
+      "spectatorCapacity": 70649,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Entry A",
+            "isAccessible": true,
+            "guidance": "Ground-level entry, drop-off zone adjacent"
+          },
+          {
+            "entranceName": "Entry E",
+            "isAccessible": true,
+            "guidance": "Elevator bank inside entry"
+          },
+          {
+            "entranceName": "Entry K",
+            "isAccessible": false,
+            "guidance": "Escalator-heavy; not recommended for mobility needs"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Sensory room near Entry A guest services; sensory bags available",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille signage at elevators and restrooms; audio-descriptive commentary receivers at guest services; service-animal relief area near Entry A",
+        "lifts": "Elevator banks at Entries A and E serving all levels",
+        "accessibleToilets": "Accessible restrooms on every concourse",
+        "calmPathHint": "Entry A opens earliest and stays calmest; arrive 90 minutes before kickoff",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Refill stations on all concourses",
+        "medicalAid": "First aid at Entries A and F",
+        "babyCare": "Nursing pod on main concourse near Entry A",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    },
+    {
+      "id": "los-angeles",
+      "stadiumName": "SoFi Stadium",
+      "publicName": "SoFi Stadium",
+      "fifaTitle": "Los Angeles Stadium",
+      "city": "Inglewood, California (Los Angeles)",
+      "country": "USA",
+      "spectatorCapacity": 70492,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Entry 4",
+            "isAccessible": true,
+            "guidance": "Mobility Ambassadors and wheelchair escorts stationed here"
+          },
+          {
+            "entranceName": "Entry 8",
+            "isAccessible": true,
+            "guidance": "Mobility Ambassadors and wheelchair escorts stationed here"
+          },
+          {
+            "entranceName": "Entry 10",
+            "isAccessible": true,
+            "guidance": "Mobility Ambassadors and wheelchair escorts stationed here"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on every level and price point",
+        "calmRoom": "Two sensory-inclusive spaces (Level 3 NE and SW Guest Services); free sensory kits",
+        "auditoryAssist": "Assistive listening devices at Guest Services (ID deposit)",
+        "visualAssist": "Braille and tactile signage throughout; audio-descriptive commentary via Guest Services (ID deposit); service-animal relief areas outside Entries 4 and 8",
+        "lifts": "Elevators serving all levels near Guest Services locations",
+        "accessibleToilets": "Accessible restrooms on all levels",
+        "calmPathHint": "Entry 8 with a Mobility Ambassador gives the most direct path to Level 3 sensory spaces",
+        "isVerified": true
+      },
+      "amenities": {
+        "drinkingWater": "Bottle-refill stations throughout",
+        "medicalAid": "First aid at Entries 4 and 10",
+        "babyCare": "Nursing room at Level 3 Guest Services",
+        "prayerSpace": "Quiet/multi-faith space via Guest Services"
+      }
+    },
+    {
+      "id": "kansas-city",
+      "stadiumName": "Arrowhead Stadium",
+      "publicName": "GEHA Field at Arrowhead Stadium",
+      "fifaTitle": "Kansas City Stadium",
+      "city": "Kansas City, Missouri",
+      "country": "USA",
+      "spectatorCapacity": 69045,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Gate B",
+            "isAccessible": true,
+            "guidance": "Ramp entry with accessible parking nearby"
+          },
+          {
+            "entranceName": "Gate D",
+            "isAccessible": true,
+            "guidance": "Elevator access to upper deck"
+          },
+          {
+            "entranceName": "Gate F",
+            "isAccessible": false,
+            "guidance": "Stairs from parking lot"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Sensory room near Gate B; sensory bags at guest services",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille signage at elevators; audio-descriptive commentary receivers at guest services; service-animal relief area near Gate B",
+        "lifts": "Elevators at Gates B and D",
+        "accessibleToilets": "Accessible restrooms on every concourse",
+        "calmPathHint": "Gate B side is quietest before kickoff; use the ramp from accessible parking",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Water fountains on all concourses",
+        "medicalAid": "First aid stations at Gates B and E",
+        "babyCare": "Nursing room at Gate B guest services",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    },
+    {
+      "id": "san-francisco",
+      "stadiumName": "Levi's Stadium",
+      "publicName": "Levi's Stadium",
+      "fifaTitle": "San Francisco Bay Area Stadium",
+      "city": "Santa Clara, California (SF Bay Area)",
+      "country": "USA",
+      "spectatorCapacity": 68827,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Gate A",
+            "isAccessible": true,
+            "guidance": "Main accessible entry, level with transit drop-off"
+          },
+          {
+            "entranceName": "Gate C",
+            "isAccessible": true,
+            "guidance": "Elevator bank inside"
+          },
+          {
+            "entranceName": "Gate F",
+            "isAccessible": false,
+            "guidance": "Stairs only from lot"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Sensory room on main concourse near Gate A; sensory kits available",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille and tactile signage at elevators and restrooms; audio-descriptive commentary receivers at guest services; service-animal relief area outside Gate A",
+        "lifts": "Elevators at Gates A and C serving all levels",
+        "accessibleToilets": "Accessible restrooms on every level",
+        "calmPathHint": "Gate A from the light-rail side is step-free and least congested early",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Refill stations throughout",
+        "medicalAid": "First aid on main and upper concourses",
+        "babyCare": "Nursing room near Gate A guest services",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    },
+    {
+      "id": "houston",
+      "stadiumName": "NRG Stadium",
+      "publicName": "NRG Stadium",
+      "fifaTitle": "Houston Stadium",
+      "city": "Houston, Texas",
+      "country": "USA",
+      "spectatorCapacity": 68777,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Gate 1 (North)",
+            "isAccessible": true,
+            "guidance": "Level entry with adjacent accessible parking"
+          },
+          {
+            "entranceName": "Gate 5 (East)",
+            "isAccessible": true,
+            "guidance": "Elevator access inside"
+          },
+          {
+            "entranceName": "Gate 10 (South)",
+            "isAccessible": false,
+            "guidance": "Ramp closed on event days; stairs"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Quiet room near Gate 1 guest services; sensory bags available",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille signage at elevators; audio-descriptive commentary receivers at guest services; service-animal relief area near Gate 1 (North)",
+        "lifts": "Elevators at Gates 1 and 5",
+        "accessibleToilets": "Accessible restrooms on every concourse",
+        "calmPathHint": "Gate 1 North side is calmest; enter when gates open to avoid heat and crowds",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Water fountains and refill stations on all levels",
+        "medicalAid": "First aid at Gates 1 and 5",
+        "babyCare": "Nursing room on main concourse near Gate 1",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    },
+    {
+      "id": "philadelphia",
+      "stadiumName": "Lincoln Financial Field",
+      "publicName": "Lincoln Financial Field",
+      "fifaTitle": "Philadelphia Stadium",
+      "city": "Philadelphia, Pennsylvania",
+      "country": "USA",
+      "spectatorCapacity": 68324,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Headhouse Gate",
+            "isAccessible": true,
+            "guidance": "Main accessible entry with escort service"
+          },
+          {
+            "entranceName": "Gate C",
+            "isAccessible": true,
+            "guidance": "Elevator bank inside"
+          },
+          {
+            "entranceName": "Gate E",
+            "isAccessible": false,
+            "guidance": "Steep approach ramp"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Sensory room at Headhouse Plaza; sensory bags at guest services",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille and tactile signage at elevators; audio-descriptive commentary receivers at Headhouse guest services; service-animal relief area on Headhouse Plaza",
+        "lifts": "Elevators at Headhouse and Gate C",
+        "accessibleToilets": "Accessible restrooms on every concourse",
+        "calmPathHint": "Headhouse Gate opens first and has the widest, calmest plaza approach",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Refill stations on all concourses",
+        "medicalAid": "First aid at Headhouse and Gate D",
+        "babyCare": "Nursing room near Headhouse guest services",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    },
+    {
+      "id": "atlanta",
+      "stadiumName": "Mercedes-Benz Stadium",
+      "publicName": "Mercedes-Benz Stadium",
+      "fifaTitle": "Atlanta Stadium",
+      "city": "Atlanta, Georgia",
+      "country": "USA",
+      "spectatorCapacity": 68239,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Gate 1",
+            "isAccessible": true,
+            "guidance": "Step-free from Home Depot Backyard plaza"
+          },
+          {
+            "entranceName": "Gate 2",
+            "isAccessible": true,
+            "guidance": "Closest to elevator bank and guest services"
+          },
+          {
+            "entranceName": "Gate 4",
+            "isAccessible": false,
+            "guidance": "Stairs from street level"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Sensory room on main concourse near Gate 2; sensory bags available",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille signage at elevators and restrooms; audio-descriptive commentary receivers at guest services; service-animal relief area near Gate 1",
+        "lifts": "Elevators near Gates 1 and 2 serving all levels",
+        "accessibleToilets": "Accessible restrooms on every level",
+        "calmPathHint": "Gate 2 from the MARTA side is step-free and quieter before gates open",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Low-cost water and refill stations throughout",
+        "medicalAid": "First aid on main and upper concourses",
+        "babyCare": "Nursing room near Gate 2 guest services",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    },
+    {
+      "id": "seattle",
+      "stadiumName": "Lumen Field",
+      "publicName": "Lumen Field",
+      "fifaTitle": "Seattle Stadium",
+      "city": "Seattle, Washington",
+      "country": "USA",
+      "spectatorCapacity": 66925,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Northwest Gate",
+            "isAccessible": true,
+            "guidance": "Level entry from Occidental Ave; escort available"
+          },
+          {
+            "entranceName": "Southeast Gate",
+            "isAccessible": true,
+            "guidance": "Elevator access inside"
+          },
+          {
+            "entranceName": "North Gate",
+            "isAccessible": false,
+            "guidance": "Stair-heavy approach"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Sensory room near Northwest Gate; sensory kits at guest services",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille and tactile signage at elevators; audio-descriptive commentary receivers at guest services; service-animal relief area outside the Northwest Gate",
+        "lifts": "Elevators at Northwest and Southeast gates",
+        "accessibleToilets": "Accessible restrooms on every concourse",
+        "calmPathHint": "Northwest Gate via Occidental Ave is flat and least crowded early",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Refill stations on all concourses",
+        "medicalAid": "First aid at Northwest and Southeast gates",
+        "babyCare": "Nursing room at Northwest guest services",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    },
+    {
+      "id": "miami",
+      "stadiumName": "Hard Rock Stadium",
+      "publicName": "Hard Rock Stadium",
+      "fifaTitle": "Miami Stadium",
+      "city": "Miami Gardens, Florida (Miami)",
+      "country": "USA",
+      "spectatorCapacity": 64478,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Gate 2",
+            "isAccessible": true,
+            "guidance": "Shaded, level entry near accessible parking"
+          },
+          {
+            "entranceName": "Gate 5",
+            "isAccessible": true,
+            "guidance": "Elevator bank inside"
+          },
+          {
+            "entranceName": "Gate 8",
+            "isAccessible": false,
+            "guidance": "Stairs only"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Sensory room near Gate 2 guest services; sensory bags available",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille signage at elevators; audio-descriptive commentary receivers at guest services; service-animal relief area near Gate 2",
+        "lifts": "Elevators at Gates 2 and 5",
+        "accessibleToilets": "Accessible restrooms on every concourse",
+        "calmPathHint": "Gate 2 is shaded and calm; arrive early to avoid afternoon heat",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Water and refill stations throughout",
+        "medicalAid": "First aid at Gates 2 and 6",
+        "babyCare": "Nursing room near Gate 2 guest services",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    },
+    {
+      "id": "boston",
+      "stadiumName": "Gillette Stadium",
+      "publicName": "Gillette Stadium",
+      "fifaTitle": "Boston Stadium",
+      "city": "Foxborough, Massachusetts (Boston)",
+      "country": "USA",
+      "spectatorCapacity": 64146,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Lighthouse Gate",
+            "isAccessible": true,
+            "guidance": "Main accessible entry; escort on request"
+          },
+          {
+            "entranceName": "Bank of America Gate",
+            "isAccessible": true,
+            "guidance": "Elevator access inside"
+          },
+          {
+            "entranceName": "Gate P2",
+            "isAccessible": false,
+            "guidance": "Long stair climb from lot"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Sensory room near Lighthouse Gate; sensory bags at guest services",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille and tactile signage at elevators; audio-descriptive commentary receivers at guest services; service-animal relief area outside the Lighthouse Gate",
+        "lifts": "Elevators at Lighthouse and Bank of America gates",
+        "accessibleToilets": "Accessible restrooms on every concourse",
+        "calmPathHint": "Lighthouse Gate from Patriot Place is level and quietest before kickoff",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Refill stations on all concourses",
+        "medicalAid": "First aid at Lighthouse Gate and upper concourse",
+        "babyCare": "Nursing room near Lighthouse guest services",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    },
+    {
+      "id": "vancouver",
+      "stadiumName": "BC Place",
+      "publicName": "BC Place",
+      "fifaTitle": "BC Place Vancouver",
+      "city": "Vancouver, British Columbia",
+      "country": "Canada",
+      "spectatorCapacity": 52497,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Gate A",
+            "isAccessible": true,
+            "guidance": "Level entry from Terry Fox Plaza"
+          },
+          {
+            "entranceName": "Gate H",
+            "isAccessible": true,
+            "guidance": "Elevator access inside"
+          },
+          {
+            "entranceName": "Gate C",
+            "isAccessible": false,
+            "guidance": "Stairs from Pacific Blvd"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Quiet room near Gate A guest services; sensory kits available",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille and tactile signage at elevators and restrooms; audio-descriptive commentary on request via guest services; service-animal relief area on Terry Fox Plaza outside Gate A",
+        "lifts": "Elevators at Gates A and H",
+        "accessibleToilets": "Accessible restrooms on every concourse",
+        "calmPathHint": "Gate A via Terry Fox Plaza is step-free and least congested",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Water fountains on all concourses",
+        "medicalAid": "First aid at Gates A and H",
+        "babyCare": "Nursing room near Gate A guest services",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    },
+    {
+      "id": "monterrey",
+      "stadiumName": "Estadio BBVA",
+      "publicName": "Estadio BBVA",
+      "fifaTitle": "Estadio Monterrey",
+      "city": "Guadalupe, Nuevo Leon (Monterrey)",
+      "country": "Mexico",
+      "spectatorCapacity": 51243,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Puerta 2",
+            "isAccessible": true,
+            "guidance": "Ramp entry near accessible parking"
+          },
+          {
+            "entranceName": "Puerta 6",
+            "isAccessible": true,
+            "guidance": "Elevator access inside"
+          },
+          {
+            "entranceName": "Puerta 9",
+            "isAccessible": false,
+            "guidance": "Stairs only"
+          }
+        ],
+        "accessibleSeating": "Wheelchair bays with companion seats, mainly lower bowl",
+        "calmRoom": "None listed; quiet area near Puerta 2 on request",
+        "auditoryAssist": "Hearing-assist devices at guest services",
+        "visualAssist": "Tactile signage limited; no audio-descriptive commentary listed - staff escorts available on request; service-animal relief area outside Puerta 2 on request",
+        "lifts": "Elevators at Puertas 2 and 6",
+        "accessibleToilets": "Accessible restrooms on main concourse",
+        "calmPathHint": "Puerta 2 ramp from the accessible lot is the calmest approach",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Water vendors and fountains on concourses",
+        "medicalAid": "First aid posts at Puertas 2 and 6",
+        "babyCare": "Nursing room near Puerta 2 guest services",
+        "prayerSpace": "Quiet/multi-faith space via guest services"
+      }
+    },
+    {
+      "id": "guadalajara",
+      "stadiumName": "Estadio Akron",
+      "publicName": "Estadio Akron",
+      "fifaTitle": "Estadio Guadalajara",
+      "city": "Zapopan, Jalisco (Guadalajara)",
+      "country": "Mexico",
+      "spectatorCapacity": 45664,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Puerta 1",
+            "isAccessible": true,
+            "guidance": "Ramp entry, drop-off zone adjacent"
+          },
+          {
+            "entranceName": "Puerta 4",
+            "isAccessible": true,
+            "guidance": "Elevator access inside"
+          },
+          {
+            "entranceName": "Puerta 8",
+            "isAccessible": false,
+            "guidance": "Steep stairs"
+          }
+        ],
+        "accessibleSeating": "Wheelchair bays with companion seats in lower bowl",
+        "calmRoom": "None listed; quiet area near Puerta 1 on request",
+        "auditoryAssist": "Hearing-assist devices at guest services",
+        "visualAssist": "Tactile signage limited; no audio-descriptive commentary listed - staff escorts available on request; service-animal relief area outside Puerta 1 on request",
+        "lifts": "Elevators at Puertas 1 and 4",
+        "accessibleToilets": "Accessible restrooms on main concourse",
+        "calmPathHint": "Puerta 1 from the drop-off zone avoids the main pedestrian crush",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Water vendors and fountains on concourses",
+        "medicalAid": "First aid posts at Puertas 1 and 4",
+        "babyCare": "Nursing room near Puerta 1 guest services",
+        "prayerSpace": "Quiet/multi-faith space via guest services"
+      }
+    },
+    {
+      "id": "toronto",
+      "stadiumName": "BMO Field",
+      "publicName": "BMO Field",
+      "fifaTitle": "Toronto Stadium",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "spectatorCapacity": 43036,
+      "support": {
+        "entrances": [
+          {
+            "entranceName": "Gate 1",
+            "isAccessible": true,
+            "guidance": "Level entry from Princes' Blvd"
+          },
+          {
+            "entranceName": "Gate 3",
+            "isAccessible": true,
+            "guidance": "Elevator access inside"
+          },
+          {
+            "entranceName": "Gate 5",
+            "isAccessible": false,
+            "guidance": "Stairs only"
+          }
+        ],
+        "accessibleSeating": "Wheelchair and companion seating on all levels",
+        "calmRoom": "Quiet room near Gate 1 guest services; sensory kits available",
+        "auditoryAssist": "Assistive listening devices at guest services",
+        "visualAssist": "Braille and tactile signage at elevators; audio-descriptive commentary on request via guest services; service-animal relief area outside Gate 1",
+        "lifts": "Elevators at Gates 1 and 3",
+        "accessibleToilets": "Accessible restrooms on every concourse",
+        "calmPathHint": "Gate 1 from Princes' Blvd is flat and quietest before kickoff",
+        "isVerified": false
+      },
+      "amenities": {
+        "drinkingWater": "Refill stations on all concourses",
+        "medicalAid": "First aid at Gates 1 and 3",
+        "babyCare": "Nursing room near Gate 1 guest services",
+        "prayerSpace": "Multi-faith room via guest services"
+      }
+    }
+  ]
+}

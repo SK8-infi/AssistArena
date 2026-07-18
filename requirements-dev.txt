@@ -1,0 +1,6 @@
+-r requirements.txt
+ruff==0.15.20
+mypy==2.2.0
+radon==6.0.1
+interrogate==1.7.0
+coverage==7.15.0

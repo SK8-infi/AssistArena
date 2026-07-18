@@ -1,0 +1,45 @@
+# Lint, strict type check, docstring coverage, complexity gate, and the full
+# test suite with 100% coverage enforced, on every push and PR.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Lint (ruff)
+        run: python -m ruff check backend tests
+
+      - name: Type check (mypy --strict)
+        run: python -m mypy backend
+
+      - name: Docstring coverage (interrogate, fails under 100%)
+        run: python -m interrogate backend
+
+      - name: Complexity gate (radon, fails on any grade C+ function)
+        run: |
+          hits="$(python -m radon cc backend -n C)"
+          if [ -n "$hits" ]; then
+            echo "$hits"
+            echo "::error::Function(s) at or above complexity grade C — refactor before merging."
+            exit 1
+          fi
+
+      - name: Tests with coverage (fails under 100%)
+        run: |
+          python -m coverage run -m pytest
+          python -m coverage report

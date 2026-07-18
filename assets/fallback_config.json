@@ -1,0 +1,281 @@
+{
+  "SUPPORTED_LANGS": ["en", "es", "fr", "ar"],
+  "INTENT_ORDER": [
+    "support",
+    "amenities",
+    "schedule",
+    "refreshments",
+    "directions",
+    "greeting"
+  ],
+  "INTENT_KEYWORDS": {
+    "support": {
+      "en": [
+        "wheelchair", "accessible", "accessibility", "disability",
+        "disabled", "sensory", "autism", "autistic", "quiet", "quietest",
+        "hearing", "deaf", "blind", "vision", "sight", "braille",
+        "elevator", "lift", "ramp", "step-free", "mobility", "restroom",
+        "toilet", "sign language", "listening"
+      ],
+      "es": [
+        "silla de ruedas", "accesible", "accesibilidad", "discapacidad",
+        "sensorial", "autismo", "sala tranquila", "audicion", "auditiva",
+        "sordo", "sorda", "ciego", "ciega", "vision", "braille",
+        "ascensor", "elevador", "rampa", "movilidad", "bano", "banos"
+      ],
+      "fr": [
+        "fauteuil roulant", "accessible", "accessibilite", "handicap",
+        "sensoriel", "sensorielle", "autisme", "salle calme", "audition",
+        "auditif", "sourd", "sourde", "aveugle", "malvoyant", "braille",
+        "ascenseur", "rampe", "mobilite", "toilettes"
+      ],
+      "ar": [
+        "كرسي متحرك", "الكرسي المتحرك", "كراسي متحركة", "امكانية الوصول",
+        "اعاقة", "الاعاقة", "معاق", "المعاقين", "ذوي الاحتياجات الخاصة",
+        "حسي", "حسية", "غرفة حسية", "توحد", "التوحد", "هادئ", "هادئة",
+        "مكان هادئ", "سمع", "السمع", "ضعف السمع", "اصم", "الصم",
+        "لغة الاشارة", "سماعة", "اعمى", "المكفوفين", "مكفوف", "بصر",
+        "البصر", "برايل", "مصعد", "المصعد", "مصاعد", "المصاعد", "منحدر",
+        "المنحدر", "مرحاض", "المرحاض", "دورة مياه", "دورة المياه",
+        "دورات المياه", "حمام", "الحمام"
+      ]
+    },
+    "amenities": {
+      "en": [
+        "nursing", "breastfeed", "lactation", "baby", "first aid",
+        "medical", "medic", "prayer", "pray", "multi-faith"
+      ],
+      "es": [
+        "lactancia", "amamantar", "bebe", "primeros auxilios",
+        "enfermeria", "oracion", "rezar"
+      ],
+      "fr": [
+        "allaitement", "allaiter", "bebe", "premiers secours",
+        "infirmerie", "priere", "prier"
+      ],
+      "ar": [
+        "رضاعة", "الرضاعة", "ارضاع", "غرفة رضاعة", "رضيع", "حليب",
+        "اسعاف", "الاسعاف", "اسعافات", "اسعافات اولية", "طبي", "طبيب",
+        "رعاية طبية", "صلاة", "الصلاة", "مصلى", "دعاء", "متعدد الاديان"
+      ]
+    },
+    "schedule": {
+      "en": [
+        "match", "opening", "final", "kickoff", "kick-off", "schedule",
+        "fixture", "when is", "what time", "ticket"
+      ],
+      "es": [
+        "partido", "inauguracion", "inaugural", "final", "calendario",
+        "horario", "cuando", "boleto", "entradas"
+      ],
+      "fr": [
+        "match", "ouverture", "finale", "calendrier", "horaire", "quand",
+        "coup d'envoi", "billet"
+      ],
+      "ar": [
+        "مباراة", "المباراة", "مباريات", "المباريات", "افتتاح", "الافتتاح",
+        "المباراة الافتتاحية", "افتتاحية", "نهائي", "النهائي",
+        "المباراة النهائية", "نهائية", "جدول", "الجدول", "الجدول الزمني",
+        "موعد", "المواعيد", "متى", "توقيت", "تذكرة", "التذكرة", "تذاكر",
+        "التذاكر", "بطاقة"
+      ]
+    },
+    "refreshments": {
+      "en": ["water", "food", "drink", "eat", "thirsty", "hungry", "snack", "concession"],
+      "es": ["agua", "comida", "comer", "beber", "sed", "hambre"],
+      "fr": ["eau", "nourriture", "manger", "boire", "soif", "faim"],
+      "ar": [
+        "ماء", "الماء", "مياه", "المياه", "مياه شرب", "طعام", "الطعام",
+        "اكل", "الاكل", "ماكولات", "شراب", "مشروب", "مشروبات", "عطش",
+        "عطشان", "جوع", "جائع", "وجبة"
+      ]
+    },
+    "directions": {
+      "en": [
+        "gate", "entrance", "entry", "route", "way to", "seat", "section",
+        "how do i get", "where is", "directions", "navigate"
+      ],
+      "es": [
+        "puerta", "entrada", "ruta", "asiento", "seccion", "como llego",
+        "donde esta", "donde queda", "acceso"
+      ],
+      "fr": [
+        "porte", "entree", "itineraire", "chemin", "siege", "section",
+        "comment aller", "ou est", "ou sont", "acces"
+      ],
+      "ar": [
+        "بوابة", "البوابة", "بوابات", "البوابات", "مدخل", "المدخل",
+        "مداخل", "دخول", "مسار", "المسار", "طريق", "الطريق", "طريقي",
+        "مقعد", "المقعد", "مقعدي", "قسم", "القسم", "منطقة", "كيف اصل",
+        "كيف اذهب", "اين", "اتجاهات", "الاتجاهات", "خريطة"
+      ]
+    },
+    "greeting": {
+      "en": ["hello", "hi", "hey", "good morning", "good afternoon", "good evening", "help"],
+      "es": ["hola", "buenos dias", "buenas tardes", "buenas noches", "ayuda"],
+      "fr": ["bonjour", "salut", "bonsoir", "aide"],
+      "ar": [
+        "مرحبا", "السلام عليكم", "السلام", "سلام", "اهلا", "اهلا وسهلا",
+        "صباح الخير", "مساء الخير", "مساعدة", "ساعدني", "هلا"
+      ]
+    }
+  },
+  "SUPPORT_KEYWORDS": {
+    "physical": [
+      "wheelchair", "silla de ruedas", "fauteuil", "elevator", "lift",
+      "ascensor", "elevador", "ascenseur", "ramp", "rampa", "rampe",
+      "step-free", "mobility", "movilidad", "mobilite", "restroom",
+      "toilet", "bano", "banos", "toilettes", "seating", "asiento",
+      "كرسي متحرك", "الكرسي المتحرك", "مصعد", "المصعد", "مصاعد", "منحدر",
+      "المنحدر", "مرحاض", "المرحاض", "دورة مياه", "دورة المياه", "حمام",
+      "الحمام", "مقعد", "المقعد", "التنقل", "حركة"
+    ],
+    "auditory": [
+      "hearing", "deaf", "sordo", "sorda", "auditiva", "audicion", "sourd",
+      "sourde", "auditif", "audition", "listening", "caption",
+      "sign language",
+      "سمع", "السمع", "ضعف السمع", "اصم", "الصم", "لغة الاشارة", "سماعة"
+    ],
+    "visual": [
+      "blind", "vision", "sight", "braille", "ciego", "ciega", "aveugle",
+      "malvoyant", "vue",
+      "اعمى", "المكفوفين", "مكفوف", "بصر", "البصر", "برايل", "ضعف البصر"
+    ],
+    "calm": [
+      "sensory", "sensorial", "sensoriel", "sensorielle", "autism",
+      "autistic", "autismo", "autisme", "quiet", "quietest", "noise",
+      "ruido", "bruit", "tranquila", "calme",
+      "حسي", "حسية", "توحد", "التوحد", "هادئ", "هادئة", "ضوضاء", "ضجيج",
+      "غرفة حسية"
+    ]
+  },
+  "AMENITY_KEYWORDS": {
+    "babyCare": ["nursing", "breastfeed", "lactation", "lactancia",
+                  "amamantar", "allaitement", "allaiter", "baby", "bebe",
+                  "رضاعة", "الرضاعة", "ارضاع", "رضيع", "حليب"],
+    "medicalAid": ["first aid", "medical", "medic", "primeros auxilios",
+                    "enfermeria", "premiers secours", "infirmerie",
+                    "اسعاف", "الاسعاف", "اسعافات", "طبي", "طبيب", "رعاية طبية"],
+    "prayerSpace": ["prayer", "pray", "oracion", "rezar", "priere", "prier",
+                     "multi-faith",
+                     "صلاة", "الصلاة", "مصلى", "دعاء", "متعدد الاديان"]
+  },
+  "TRAFFIC_LABELS": {
+    "en": {"low": "low", "moderate": "moderate", "high": "high"},
+    "es": {"low": "baja", "moderate": "moderada", "high": "alta"},
+    "fr": {"low": "faible", "moderate": "moderee", "high": "elevee"},
+    "ar": {"low": "منخفض", "moderate": "متوسط", "high": "مرتفع"}
+  },
+  "FIELD_TRANSLATIONS": {
+    "en": {
+      "entrances": "Accessible entrances",
+      "accessibleSeating": "Accessible seating",
+      "calmRoom": "Sensory and calm support",
+      "auditoryAssist": "Auditory assistance",
+      "visualAssist": "Visual support",
+      "lifts": "Lifts and elevators",
+      "accessibleToilets": "Accessible restrooms",
+      "calmPathHint": "Recommended calm path"
+    },
+    "es": {
+      "entrances": "Entradas accesibles",
+      "accessibleSeating": "Asientos accesibles",
+      "calmRoom": "Apoyo sensorial y de calma",
+      "auditoryAssist": "Audición asistida",
+      "visualAssist": "Apoyo visual",
+      "lifts": "Ascensores y elevadores",
+      "accessibleToilets": "Baños accesibles",
+      "calmPathHint": "Ruta tranquila recomendada"
+    },
+    "fr": {
+      "entrances": "Entrées accessibles",
+      "accessibleSeating": "Places accessibles",
+      "calmRoom": "Soutien sensoriel et calme",
+      "auditoryAssist": "Aide à l'écoute",
+      "visualAssist": "Assistance visuelle",
+      "lifts": "Ascenseurs",
+      "accessibleToilets": "Toilettes accessibles",
+      "calmPathHint": "Itinéraire calme recommandé"
+    },
+    "ar": {
+      "entrances": "المداخل المتاحة",
+      "accessibleSeating": "المقاعد المتاحة",
+      "calmRoom": "الدعم الحسي والهدوء",
+      "auditoryAssist": "أجهزة الاستماع المساعدة",
+      "visualAssist": "دعم البصر",
+      "lifts": "المصاعد",
+      "accessibleToilets": "دورات المياه المتاحة",
+      "calmPathHint": "المسار الهادئ الموصى به"
+    }
+  },
+  "TEMPLATES": {
+    "en": {
+      "greeting": "Hello. I am AssistArena, your tournament stadium assistant. You can query me about accessible entrances, seating facilities, calm areas, drinking water, or match schedules.",
+      "help": "I can assist with stadium support systems, entrances, amenities, and match info. Try asking: which entrance has wheelchair access?",
+      "pick_stadium": "Please select a stadium first so I can retrieve precise details. For example: {examples}.",
+      "unverified": "Please note: These stadium support details have not been officially verified yet.",
+      "support_intro": "Stadium assistance details for {stadium}.",
+      "babyCare": "Yes. {stadium} has a baby care room. Location: {value}.",
+      "medicalAid": "First aid services at {stadium}: {value}.",
+      "prayerSpace": "Prayer and multi-faith spaces at {stadium}: {value}.",
+      "refreshments": "Water at {stadium}: {water}. Food concessions are located on all concourses; stadium staff can guide you to counters.",
+      "directions": "Recommended entrance for {stadium}: {entrance}. {guidance}. Traffic level is currently {level} (simulated live-ops). Hint: {hint}",
+      "outage": "Warning: The lift near {entrance} is currently out of service.",
+      "schedule_opening": "{stadium} hosts the tournament opening match on {date}.",
+      "schedule_final": "{stadium} hosts the tournament final on {date}.",
+      "schedule_general": "The opening match takes place on {open_date} at {open_stadium}. The final is scheduled for {final_date} at {final_stadium}.",
+      "tickets": "FIFA provides these accessibility ticket categories: {categories}."
+    },
+    "es": {
+      "greeting": "Hola. Soy AssistArena, su asistente de estadios de la Copa Mundial. Puede consultarme sobre entradas accesibles, asientos adaptados, salas de calma, agua potable o el calendario de partidos.",
+      "help": "Puedo ayudarle con sistemas de apoyo en estadios, entradas, servicios y partidos. Pruebe a preguntar: ¿qué entrada tiene acceso para silla de ruedas?",
+      "pick_stadium": "Por favor, elija primero un estadio para proporcionarle detalles precisos. Por ejemplo: {examples}.",
+      "unverified": "Tenga en cuenta: los detalles de apoyo aún no han sido verificados oficialmente.",
+      "support_intro": "Detalles de asistencia en el estadio {stadium}.",
+      "babyCare": "Sí. {stadium} cuenta con sala de lactancia. Ubicación: {value}.",
+      "medicalAid": "Servicios de primeros auxilios en {stadium}: {value}.",
+      "prayerSpace": "Espacios de oración en {stadium}: {value}.",
+      "refreshments": "Agua en {stadium}: {water}. Hay puestos de comida en todos los pasillos; el personal puede guiarle a los mostradores accesibles.",
+      "directions": "Entrada recomendada para {stadium}: {entrance}. {guidance}. El nivel de congestión actual es {level} (datos simulados). Consejo: {hint}",
+      "outage": "Aviso: El ascensor cerca de {entrance} está fuera de servicio.",
+      "schedule_opening": "{stadium} albergará el partido inaugural el {date}.",
+      "schedule_final": "{stadium} albergará la final el {date}.",
+      "schedule_general": "El partido inaugural se jugará el {open_date} en {open_stadium}. La final está programada para el {final_date} en {final_stadium}.",
+      "tickets": "FIFA ofrece las siguientes categorías de entradas de accesibilidad: {categories}."
+    },
+    "fr": {
+      "greeting": "Bonjour. Je suis AssistArena, votre assistant de stade de la Coupe du Monde. Vous pouvez m'interroger sur les entrées accessibles, les places adaptées, les zones calmes, l'eau potable ou le calendrier des matchs.",
+      "help": "Je peux vous aider avec les systèmes d'assistance, les entrées, les services et les matchs. Essayez de demander: quelle entrée est accessible en fauteuil roulant?",
+      "pick_stadium": "Veuillez choisir un stade pour obtenir des détails précis. Par exemple: {examples}.",
+      "unverified": "Remarque: ces détails d'assistance ne sont pas encore officiellement vérifiés.",
+      "support_intro": "Détails d'assistance au stade pour {stadium}.",
+      "babyCare": "Oui. {stadium} dispose d'un espace bébé. Emplacement: {value}.",
+      "medicalAid": "Services de premiers secours à {stadium}: {value}.",
+      "prayerSpace": "Espaces de prière à {stadium}: {value}.",
+      "refreshments": "Eau potable à {stadium}: {water}. Des stands de nourriture sont disponibles sur tous les halls; le personnel peut vous guider.",
+      "directions": "Entrée recommandée pour {stadium}: {entrance}. {guidance}. La congestion actuelle est {level} (données simulées). Conseil: {hint}",
+      "outage": "Avertissement: L'ascenseur près de {entrance} est actuellement hors service.",
+      "schedule_opening": "{stadium} accueille le match d'ouverture le {date}.",
+      "schedule_final": "{stadium} accueille la finale le {date}.",
+      "schedule_general": "Le match d'ouverture aura lieu le {open_date} à {open_stadium}. La finale est prévue le {final_date} à {final_stadium}.",
+      "tickets": "La FIFA propose ces catégories de billets d'accessibilité: {categories}."
+    },
+    "ar": {
+      "greeting": "مرحباً. أنا AssistArena، مساعدك لملاعب البطولة. يمكنك الاستفسار عن المداخل المتاحة، والمقاعد المجهزة، والمناطق الهادئة، ومياه الشرب، وجدول المباريات.",
+      "help": "يمكنني المساعدة في أنظمة دعم الملاعب، والمداخل، والخدمات، ومعلومات المباريات. جرّب السؤال: أي مدخل متاح للكرسي المتحرك؟",
+      "pick_stadium": "يرجى اختيار ملعب أولاً لتقديم تفاصيل دقيقة. على سبيل المثال: {examples}.",
+      "unverified": "يرجى ملاحظة: تفاصيل دعم الملعب لم يتم التحقق منها رسمياً بعد.",
+      "support_intro": "تفاصيل المساعدة في ملعب {stadium}.",
+      "babyCare": "نعم. يوجد في {stadium} غرفة رعاية طفل. الموقع: {value}.",
+      "medicalAid": "خدمات الإسعافات الأولية في {stadium}: {value}.",
+      "prayerSpace": "أماكن الصلاة والعبادة في {stadium}: {value}.",
+      "refreshments": "الماء في {stadium}: {water}. تتوفر منافذ الأطعمة في جميع الممرات، ويمكن للموظفين إرشادك للمنافذ المجهزة.",
+      "directions": "المدخل الموصى به لملعب {stadium} هو: {entrance}. {guidance}. مستوى الازدحام الحالي {level} (بيانات محاكاة). نصيحة: {hint}",
+      "outage": "تحذير: المصعد القريب من {entrance} خارج الخدمة حالياً.",
+      "schedule_opening": "يستضيف {stadium} مباراة الافتتاح في {date}.",
+      "schedule_final": "يستضيف {stadium} المباراة النهائية في {date}.",
+      "schedule_general": "تقام مباراة الافتتاح في {open_date} في {open_stadium}. وتقام المباراة النهائية في {final_date} في {final_stadium}.",
+      "tickets": "تقدم FIFA فئات التذاكر المتاحة التالية: {categories}."
+    }
+  }
+}

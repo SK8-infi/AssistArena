@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="AssistArena: A smart stadium copilot for spectator support and operations during FIFA World Cup 2026.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#1565c0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<title>AssistArena — Stadium Operations Copilot</title>
+<!-- Inline SVG favicon mapping to the brand mark. Permitted by CSP img-src. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2214%22%20fill=%22%231565c0%22/%3E%3Ctext%20x=%2232%22%20y=%2247%22%20font-size=%2240%22%20text-anchor=%22middle%22%20fill=%22%23ffffff%22%3E%E2%9C%A7%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/frontend/theme.css">
+<script src="/frontend/main.js" defer></script>
+</head>
+
+<body>
+<!-- Accessibility Skip Link to help keyboard-only spectators skip layout columns -->
+<a class="skip-anchor" href="#chat-query-input">Skip directly to input</a>
+
+<header class="masthead">
+  <div class="masthead__container">
+    <div class="masthead__brand">
+      <span class="masthead__brand-icon" aria-hidden="true">&#10007;</span>
+      <div class="masthead__title-group">
+        <h1>AssistArena</h1>
+        <p class="masthead__subtext">Operations Console &middot; FIFA World Cup 2026</p>
+      </div>
+    </div>
+    
+    <div class="masthead__controls">
+      <!-- Hidden elements to preserve JavaScript model state bindings -->
+      <div hidden>
+        <select id="stadium-selector" name="stadium" aria-label="Hidden Stadium Selector">
+          <option value="">Choose a stadium</option>
+        </select>
+        <input type="checkbox" name="needs" value="physical" aria-label="Hidden Physical Assistance Checkbox">
+        <input type="checkbox" name="needs" value="visual" aria-label="Hidden Visual Support Checkbox">
+        <input type="checkbox" name="needs" value="auditory" aria-label="Hidden Auditory Support Checkbox">
+        <input type="checkbox" name="needs" value="calm" aria-label="Hidden Calm Spaces Checkbox">
+      </div>
+
+      <div class="nav-select-field">
+        <label for="lang-selector" class="sr-only">Language</label>
+        <div class="custom-select">
+          <select id="lang-selector" name="language">
+            <option value="en">English</option>
+            <option value="es">Espa&ntilde;ol</option>
+            <option value="fr">Fran&ccedil;ais</option>
+            <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="reconfigure-setup-btn" type="button" class="reconfigure-nav-btn">
+        <svg class="icon nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        Reconfigure Profile
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="content-frame">
+  <!-- JavaScript Disabled Alert -->
+  <noscript>
+    <div class="alert-banner alert-banner--error" role="alert">
+      <span class="alert-banner__icon" aria-hidden="true">&#9432;</span>
+      <span>AssistArena requires JavaScript to process spectator queries. Please enable JavaScript in your browser settings.</span>
+    </div>
+  </noscript>
+
+  <div class="single-column-layout">
+    <!-- Quick Actions Horizontal Row -->
+    <section class="quick-actions-row" aria-labelledby="quick-actions-heading">
+      <h2 id="quick-actions-heading" class="sr-only">Quick Actions</h2>
+      <div class="actions-list--horizontal">
+        <button type="button" class="query-action-chip query-chip" data-prompt="What is the accessible route to my seat?">
+          <svg class="icon chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+            <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+          </svg>
+          Route directions
+        </button>
+        <button type="button" class="query-action-chip query-chip" data-prompt="Where is the quiet entrance?">
+          <svg class="icon chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+          Quiet entrances
+        </button>
+        <button type="button" class="query-action-chip query-chip" data-prompt="Where is the nearest accessible restroom?">
+          <svg class="icon chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+            <circle cx="12" cy="4" r="1.5"></circle>
+            <path d="M10 9.5a2.5 2.5 0 1 0 5 0"></path>
+            <path d="M19 13v-2a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3v2"></path>
+            <path d="M9 13v7"></path>
+            <path d="M15 13v7"></path>
+          </svg>
+          Restroom services
+        </button>
+      </div>
+    </section>
+
+    <!-- Main Consultation Console -->
+    <section class="consult-console" aria-labelledby="consultation-heading">
+      <div class="chat-header">
+        <h2 id="consultation-heading" class="chat-header__title">Immersive Consult Console</h2>
+        <span class="status-indicator" aria-hidden="true">
+          <span class="status-indicator__dot"></span>
+          <span id="telemetry-badge-mode">Copilot online</span>
+        </span>
+      </div>
+
+      <div
+        id="chat-log"
+        class="chat-log"
+        role="log"
+        aria-live="polite"
+        aria-atomic="false"
+        aria-labelledby="consultation-heading"
+        lang="en"
+        dir="ltr"
+        tabindex="0"
+      ></div>
+
+      <!-- Composer Input -->
+      <form id="consult-composer" class="composer-form">
+        <label for="chat-query-input" class="composer-form__label">Your Query</label>
+        <div class="composer-form__input-row">
+          <input
+            id="chat-query-input"
+            class="composer-form__text-input"
+            type="text"
+            name="query"
+            autocomplete="off"
+            maxlength="2000"
+            placeholder="Ask about accessibility, routes, services..."
+            aria-describedby="composer-input-hint"
+          >
+          <button id="submit-query-btn" type="submit" class="composer-form__submit-btn">
+            <svg class="icon composer-form__btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            <span class="composer-form__btn-label">Send</span>
+          </button>
+        </div>
+        <p id="composer-input-hint" class="composer-form__hint-text">Press Enter key to submit query.</p>
+      </form>
+    </section>
+  </div>
+</main>
+
+<footer class="system-footer">
+  <p>AssistArena is a stadium simulation tool. In case of an emergency, contact security officers immediately.</p>
+</footer>
+
+<!-- Onboarding Experience Overlay -->
+<div id="onboarding-overlay" class="onboarding-overlay" role="dialog" aria-modal="true" aria-labelledby="onboarding-title" hidden>
+  <div class="onboarding-card">
+    <div class="onboarding-card__grid-overlay" aria-hidden="true"></div>
+    
+    <!-- Step 1: Select Stadium -->
+    <div id="onboarding-step-1" class="onboarding-step active">
+      <h2 id="onboarding-title" class="onboarding-header" tabindex="-1">Welcome to AssistArena</h2>
+      <p class="onboarding-description">Please choose your matchday stadium to begin compiling your operations guide.</p>
+      
+      <div class="form-field">
+        <label for="onboarding-stadium-selector">Stadium</label>
+        <div class="custom-select">
+          <select id="onboarding-stadium-selector" name="onboarding-stadium">
+            <option value="">Choose a stadium</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="onboarding-actions">
+        <button id="onboarding-btn-next-1" type="button" class="onboarding-btn onboarding-btn--primary" disabled>Continue</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Disability / Assistance Inquiry -->
+    <div id="onboarding-step-2" class="onboarding-step">
+      <h2 id="onboarding-step-2-title" class="onboarding-header" tabindex="-1">Accessibility Services</h2>
+      <p class="onboarding-description">Do you have any physical, visual, auditory, or sensory needs, or require additional assistance at the venue?</p>
+      
+      <div class="onboarding-actions onboarding-actions--split">
+        <button id="onboarding-btn-assistance-yes" type="button" class="onboarding-btn onboarding-btn--primary">Yes, configure help</button>
+        <button id="onboarding-btn-assistance-no" type="button" class="onboarding-btn onboarding-btn--secondary">No, proceed to chat</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Select Needs Preferences -->
+    <div id="onboarding-step-3" class="onboarding-step">
+      <h2 id="onboarding-step-3-title" class="onboarding-header" tabindex="-1">Configure Support</h2>
+      <p class="onboarding-description">Select all support categories that apply to you. We'll pre-configure your dashboard and guides.</p>
+      
+      <div class="onboarding-preferences">
+        <label class="preference-card">
+          <input type="checkbox" name="onboarding-needs" value="physical">
+          <div class="preference-card__content">
+            <svg class="icon preference-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="24" height="24">
+              <circle cx="16" cy="4" r="1" />
+              <path d="m18 19 1-7-6 1" />
+              <path d="m5 8 3-3 5.5 3-2.36 3.5" />
+              <path d="M4.24 14.5a5 5 0 0 0 6.88 6" />
+              <path d="M13.76 17.5a5 5 0 0 0-6.88-6" />
+            </svg>
+            <h3>Physical Assistance</h3>
+            <p>Step-free access, lifts, ramps, and accessible seating details.</p>
+          </div>
+        </label>
+        
+        <label class="preference-card">
+          <input type="checkbox" name="onboarding-needs" value="visual">
+          <div class="preference-card__content">
+            <svg class="icon preference-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="24" height="24">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <h3>Visual Support</h3>
+            <p>Audio descriptions, tactile signage, and vision guide details.</p>
+          </div>
+        </label>
+        
+        <label class="preference-card">
+          <input type="checkbox" name="onboarding-needs" value="auditory">
+          <div class="preference-card__content">
+            <svg class="icon preference-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="24" height="24">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+            <h3>Auditory Support</h3>
+            <p>Assistive listening, text transcripts, and visual alerts.</p>
+          </div>
+        </label>
+        
+        <label class="preference-card">
+          <input type="checkbox" name="onboarding-needs" value="calm">
+          <div class="preference-card__content">
+            <svg class="icon preference-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="24" height="24">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C6 21 6 22 12 22" />
+            </svg>
+            <h3>Calm Spaces</h3>
+            <p>Sensory rooms, quiet zones, and low-congestion paths.</p>
+          </div>
+        </label>
+      </div>
+      
+      <div class="onboarding-actions">
+        <button id="onboarding-btn-finish" type="button" class="onboarding-btn onboarding-btn--primary">Done &amp; Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
