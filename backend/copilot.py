@@ -236,8 +236,9 @@ def _run_consultation_turn(
     client: genai.Client, contents: list[types.Content], actions_made: list[str],
 ) -> tuple[types.GenerateContentResponse, bool]:
     """Execute a single query evaluation turn."""
+    contents_list: list[Any] = contents
     response = client.models.generate_content(
-        model=MODEL_ID, contents=contents, config=_COPILOT_CONFIG,  # type: ignore
+        model=MODEL_ID, contents=contents_list, config=_COPILOT_CONFIG,
     )
     calls = response.function_calls or []
     if not calls:
@@ -357,8 +358,9 @@ def _stream_live_consultation(
     has_output = False
 
     for _ in range(_MAX_ACTION_LOOPS):
+        contents_list: list[Any] = contents
         stream = client.models.generate_content_stream(
-            model=MODEL_ID, contents=contents, config=_COPILOT_CONFIG,  # type: ignore
+            model=MODEL_ID, contents=contents_list, config=_COPILOT_CONFIG,
         )
         model_parts: list[types.Part] = []
         calls: list[types.FunctionCall] = []
