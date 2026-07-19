@@ -15,7 +15,7 @@ from google.genai import errors, types
 
 from backend import actions, fallback
 
-MODEL_ID = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+MODEL_ID = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite")
 
 _MAX_ACTION_LOOPS = 8
 _MAX_TOKENS_BOUND = 2048
